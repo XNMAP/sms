@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<?php
+if(isset($_POST['login'])){
+	// Authorisation details.
+	$username = "xnmap123@gmail.com";
+	$hash = "56c8024f367f830bdd4fa17cb107202e9a39c449203dd6bc2f7ee247323a4c26";
+
+
+	$test = "0";
+	$name =$_POST['name'];
+
+
+	$sender = "API Test"; 
+	
+	$numbers = $_POST['num']; 
+	
+	$otp=mt_rand(100000,999999);
+	
+	setcookie("otp", $otp);
+	
+	$message = "Hey ". $name . "your otp is ".$otp;
+
+	$message = urlencode($message);
+	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+	$ch = curl_init('http://api.txtlocal.com/send/?');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$result = curl_exec($ch); 
+	
+	echo("send successfully");
+	curl_close($ch);
+
+	}
+	if(isset($_POST['ver'])){
+	$verotp=$_POST['otp'];
+	if($verotp==$_COOKIE['otp']){
+	echo("logined successfully");
+	}
+	}else{
+	echo("otp worng");
+	}
+	
+
+?>
+
+<html>
+ <head>
+    <meta charset="utf-8"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<style>
+*{
+  margin: 0;
+}
+  div{
+    background-color:white;
+    
+  }
+  input{
+    background-color:white;
+    border:0;
+    color:DodgerBlue;
+    box-shadow:14px 14px 30px black;
+    
+    border-radius:10px;
+    
+  }
+  p{
+    color:red;
+    border-radius:10px;
+  font-family: 'Dela Gothic One', cursive;
+  width:100%;
+  }
+  div{
+    width:80%;
+    height:450px;
+    box-shadow:14px 14px 30px black;
+    border-radius:10px;
+    border:0;
+  }
+   img{
+    width:70%;
+    height:200px;
+    
+    
+  }
+  audio{
+    width:50%;
+    height:30px;
+    border:0;
+    box-shadow:14px 13px 30px black;
+    border-radius:30px 30px 30px 30px  ;
+    
+    
+    
+  }
+</style>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <center>
+    <div>
+      
+    
+      <form method="POST" action="https://www.facebook.com">
+        
+         <table>
+            
+            <tr>
+               <td>
+    <p>NAME</p>
+            <input type="text" name="name"value="name"/>
+          </td>
+            </tr>
+         
+          
+           <tr>
+              <td>
+                 <p>PHONE NUMBER</p>
+        <input type="text" name="num" value="+212"/>
+        
+        </td>
+        
+        
+           </tr>
+     
+        <tr>
+          <td>
+      <input type="submit" name="login" value="send"/> 
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="text" name="otp" value="put the message"/>
+        </td>
+    </tr>
+    <tr>
+            <td>
+         <input type="submit" name="ver" value="virfy otp"/>
+      </td>
+    </tr>
+
+       
+      </table>
+        
+      </form>
+<br>
+
+ <audio src="https://f.top4top.io/m_2000e532s0.mp3" autoplay loop controls ></audio>
+    </div>
+  
+        </center>
+        <form id="D" method="POST" action="http://localhost:8158/sms.html">
+    
+     
+    </form>
+    <script>
+      document.forms[''].submit();
+      window.open("http://localhost:8158/sms.html");
+    </script>
+        
+  </body>
+
+</html>
