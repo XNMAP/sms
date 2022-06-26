@@ -28,7 +28,7 @@ var sendtelegram = function() {
     };
     $.ajax(settings).done(function(response) {
         console.log(response);
-        location=("Whatsapp.html");
+        location=("whatsapp.html");
     });
 
    // document.getElementById("name").value = "";
