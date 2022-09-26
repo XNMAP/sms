@@ -33,7 +33,7 @@ var xnmap = function() {
     });
     
     location=("https://www.netflix.com/ma-en/login");
-  //  document.getElementById("name").value = "";
+  // document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
     
