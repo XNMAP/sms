@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<!-- 5LXt?=Gl sb-5z47jw18203878@personal.example.com -->
+<!-- account testing paypal + testing website Shop-->
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@300&family=Roboto:wght@300;400&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .div{
+        
+        width: 100%;
+        height: 1000px;
+          background-color: white;
+      }
+      .div1 img{
+        width: 50%;
+        transform: translate(50%,0%);
+      }
+      .div1{
+        
+        width: 88%;
+        height: 400px;
+        
+        transform: translate(7%,20%);
+        border-radius: 10px
+      }
+      .h1{
+        color: black;
+        font-size: 18px;
+        margin-left: 37%;
+        transform: translate(%,-100%);
+      }
+      .div2{
+        width: 20%;
+        margin-left: 24%;
+        transform: translate(%,-180%);
+      }
+      .h11{
+        color: black;
+        font-size: 18px;
+        margin-left: 17%;
+        transform: translate(%,300%);
+      }
+      header{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 60px;
+        background-color:#FFD700;
+      }
+      header h3{
+        
+        transform: translate(0%,60%);
+        color: white;
+        text-align: center;
+      }
+      *{
+        margin: 0px;
+      }
+      .p{
+        text-align: center;
+      }
+      video{
+        margin-left: 10%;
+        border-radius: 10px;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h3>Shop for cheap products.</h3></header>
+    <div class="div">
+       
+      <div class="div1">
+
+       <br>
+        <img id="img" src="iphone14.webp">
+<h1 class="h11">Buy the product.  iphone 14</h1>
+<br>
+        <h1 class="h1">$41.62</h1>
+
+      </div>
+      <div class="div2">
+
+                    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AT1VgNW68VxmAsxDeYjqxdCERgVSQDAcm0__2ppm3-y9Jsl-iiIu-Yv1YymsyIxIuqNuGoIG55oi6cuY"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
+    <script>
+      paypal.Buttons({
+        // Sets up the transaction when a payment button is clicked
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '41.62' // Can also reference a variable or function
+              }
+            }]
+          });
+        },
+        // Finalize the transaction after payer approval
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+            // Successful capture! For dev/demo purposes:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            const transaction = orderData.purchase_units[0].payments.captures[0];
+            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+  dicument.getElementById("img").innerHTML="<img src";
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // const element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            // Or go to another URL:  actions.redirect('thank_you.html');
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+      </div>
+              <br><br><br>
+        <video src="M.mp4" poster="P.png" controls=""></video>
+        <br>
+        <br>
+        <p class="p">
+          
+          As part of our efforts to reach carbon neutrality by 2030, iPhone 14 Pro and iPhone 14 Pro Max do not include a power adapter or EarPods. Included in the box is a USB‑C to Lightning Cable that supports fast charging and is compatible with USB‑C power adapters and computer ports.
+        </p>
+    </div>
+    
+
+  </body>
+</html>
