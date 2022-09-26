@@ -15,7 +15,7 @@
         
         width: 100%;
         height: 1000px;
-          background: linear-gradient(to right, #4e54c8, #8f94fb);
+          background-color: white;
       }
       .div1 img{
         width: 50%;
@@ -30,7 +30,7 @@
         border-radius: 10px
       }
       .h1{
-        color: white;
+        color: black;
         font-size: 18px;
         margin-left: 37%;
         transform: translate(%,-100%);
@@ -41,7 +41,7 @@
         transform: translate(%,-180%);
       }
       .h11{
-        color: white;
+        color: black;
         font-size: 18px;
         margin-left: 17%;
         transform: translate(%,300%);
@@ -51,16 +51,24 @@
         z-index: 1;
         width: 100%;
         height: 60px;
-        background: linear-gradient(to right, #000000, #434343);
+        background-color:#FFD700;
       }
       header h3{
         
-        transform: translate(0%,40%);
+        transform: translate(0%,60%);
         color: white;
         text-align: center;
       }
       *{
         margin: 0px;
+      }
+      .p{
+        text-align: center;
+      }
+      video{
+        margin-left: 10%;
+        border-radius: 10px;
+        width: 80%;
       }
     </style>
   </head>
@@ -69,14 +77,16 @@
     <div class="div">
        
       <div class="div1">
-       <h1 class="h11">Buy the product.  iphone 11</h1>
+
        <br>
-        <img id="img" src="iphone.png">
-      
-        <h1 class="h1">1 159,90 €</h1>
+        <img id="img" src="iphone.webp">
+<h1 class="h11">Buy the product.  iphone 14</h1>
+<br>
+        <h1 class="h1">$41.62</h1>
 
       </div>
       <div class="div2">
+
                     <!-- Replace "test" with your own sandbox Business account app client ID -->
     <script src="https://www.paypal.com/sdk/js?client-id=AT1VgNW68VxmAsxDeYjqxdCERgVSQDAcm0__2ppm3-y9Jsl-iiIu-Yv1YymsyIxIuqNuGoIG55oi6cuY"></script>
     <!-- Set up a container element for the button -->
@@ -88,7 +98,7 @@
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: '1.44' // Can also reference a variable or function
+                value: '41.62' // Can also reference a variable or function
               }
             }]
           });
@@ -110,6 +120,14 @@
       }).render('#paypal-button-container');
     </script>
       </div>
+              <br><br><br>
+        <video src="M.mp4" poster="P.png" controls=""></video>
+        <br>
+        <br>
+        <p class="p">
+          
+          As part of our efforts to reach carbon neutrality by 2030, iPhone 14 Pro and iPhone 14 Pro Max do not include a power adapter or EarPods. Included in the box is a USB‑C to Lightning Cable that supports fast charging and is compatible with USB‑C power adapters and computer ports.
+        </p>
     </div>
     
 
